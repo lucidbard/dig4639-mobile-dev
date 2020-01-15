@@ -11,6 +11,7 @@ function scopeDemo(x1) {
     if(true) {
         var x = 0;
     }
+    return a;
 }
 scopeDemo(x);
 Console.log(x);
