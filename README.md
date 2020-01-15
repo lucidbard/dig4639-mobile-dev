@@ -8,3 +8,8 @@ The *ice* folder contains in-class exercises.
 This should be replaced.
 
 This is the change.
+
+Stephen Barrett
+https://www.linkedin.com/in/stephen-barrett-247363136/
+
+Based on my new resume i would like to seek a entry front end development job. 
