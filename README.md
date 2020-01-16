@@ -5,4 +5,6 @@ This repository contains work completed during Spring 2020 in Dr. Murray's DIG46
 The *ice* folder contains in-class exercises. 
 
 ## About Me
-This should be replaced.
+My name is Amiel Devora https://amieldevora.webflow.io/
+I am looking for UX/UI position in the field. 
+closes #74
