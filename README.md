@@ -13,3 +13,8 @@ Stephen Barrett
 https://www.linkedin.com/in/stephen-barrett-247363136/
 
 Based on my new resume i would like to seek a entry front end development job. 
+
+## Merging 
+1. item 1 [Google](http://www.google.com)
+2. item 2
+3. item 3 
