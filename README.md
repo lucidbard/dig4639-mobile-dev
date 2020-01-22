@@ -13,3 +13,7 @@ Stephen Barrett
 https://www.linkedin.com/in/stephen-barrett-247363136/
 
 Based on my new resume i would like to seek a entry front end development job. 
+
+## Conflicts 
+
+this section represents code on the server that isn't on the local repository. 
