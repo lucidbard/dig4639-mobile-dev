@@ -14,13 +14,10 @@ https://www.linkedin.com/in/stephen-barrett-247363136/
 
 Based on my new resume i would like to seek a entry front end development job. 
 
-<<<<<<< HEAD
 ## Merging 
 1. item 1 [Google](http://www.google.com)
 2. item 2
 3. item 3 
-=======
 ## Conflicts 
 
 this section represents code on the server that isn't on the local repository. 
->>>>>>> b862c8d39776ca5a8346dfa90f92c0f96934522c
