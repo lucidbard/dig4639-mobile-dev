@@ -20,3 +20,5 @@ This is the change.
 
 This section represents code on the server that isn't on the local repository.
 Amiel Devora looking for a UX/UI position.
+My name is Amiel Devora https://amieldevora.webflow.io/
+I am looking for UX/UI position in the field. 
