@@ -8,4 +8,5 @@ This is a sample change on the local repository.
 The *ice* folder contains in-class exercises. 
 
 ## About Me
-Amiel Devora looking for a UX/UI position.
+My name is Amiel Devora https://amieldevora.webflow.io/
+I am looking for UX/UI position in the field. 
