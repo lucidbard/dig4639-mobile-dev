@@ -4,7 +4,7 @@ class Adder {
             this.props = props;
         }
         sum(){
-            return 0;
+            return this.props.a + this.props.b;
         }
         render(){
             return `<p>The sum of ${this.props.a} and ${this.props.b} is ${this.sum()}</p>`;
