@@ -15,8 +15,9 @@ function runOnLoad()
 
 function onClick() {
     console.log("clicked!");
+    if(input.value !=""){
     var newTask = new Task({content:input.value,done:false});
     element.appendChild(newTask.render());
 }
-
+}
 window.addEventListener("DOMContentLoaded", runOnLoad);
