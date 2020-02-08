@@ -4,7 +4,7 @@ class Card {
     constructor(props) {
         this.props = props;
         this.element = document.createElement("div");
-        this.element.innerHTML = this.props.content;
+        this.span.innerHTML = this.props.content;
         this.props.className = "Card";
     }
 
