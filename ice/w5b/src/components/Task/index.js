@@ -19,11 +19,14 @@ class Task {
     onClick(e) {
         if(e.target.checked) {
             console.log("input is true");
-
-        }
+            }
         console.log(this);
         console.log(e.target);
         console.log(e.target.checked);
+        this.props.done=e.target.checked;
+        console.log(this.props.done);
+        
+
     }
     render() {
         return this.element;
