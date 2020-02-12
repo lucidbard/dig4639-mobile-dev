@@ -24,6 +24,7 @@ class Square extends React.Component {
       const status = 'Next player: X';
   
       return (
+        <>
         <div>
           <div className="status">{status}</div>
           <div className="board-row">
@@ -42,6 +43,7 @@ class Square extends React.Component {
             {this.renderSquare(8)}
           </div>
         </div>
+        </>
       );
     }
   }
