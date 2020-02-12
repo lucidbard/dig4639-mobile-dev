@@ -1,3 +1,5 @@
+// eslint-disable-next-line no-lone-blocks
+
 var a = 5
 
 console.log(a)
@@ -18,14 +20,14 @@ class Pet {
     return 'I make this sound: '
   }
 
-  getIdentity = () => {
-    console.log(this)
-  }
+    getIdentity = () => {
+      console.log(this)
+    }
 
-  // getSum = (a,b) => a + b
-  getSum = (a, b) => {
-    return a + b
-  }
+    // getSum = (a,b) => a + b
+    getSum = (a, b) => {
+      return a + b
+    }
 }
 
 class Cat extends Pet {
