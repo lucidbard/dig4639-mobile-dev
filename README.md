@@ -9,7 +9,10 @@ This is a different change than the local repository.
 The *ice* folder contains in-class exercises. 
 
 ## About Me
-This should be replaced.
+
+My name is Amiel Devora https://amieldevora.webflow.io/
+I am looking for UX/UI position in the field. 
+
 
 ## Merging
  1. Item 1 [Google](http://www.google.com)
@@ -20,9 +23,4 @@ This is the change.
 ## Conflicts
 
 This section represents code on the server that isn't on the local repository.
-Amiel Devora looking for a UX/UI position.
-My name is Amiel Devora https://amieldevora.webflow.io/
-I am looking for UX/UI position in the field. 
-My name is Amiel Devora https://amieldevora.webflow.io/
-I am looking for UX/UI position in the field. 
-closes #74
+
