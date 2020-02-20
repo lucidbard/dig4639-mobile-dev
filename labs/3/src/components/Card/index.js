@@ -1,18 +1,13 @@
-import React, { Component } from "react";
-import './components/Card/index.css';
+import React from 'react';
 
 
-class App extends Component {
+class Card extends React.Component {
 
-  render() {
-    return(
-      <div className="card">
-        <div className="header">This is a Card!</div>
-      </div>
-    )
+    render() {
+      return(
+        <div className="card">
+          This is a Card!
+        </div>
+      )
+    }
   }
-}
-export default App;
-
-
-
