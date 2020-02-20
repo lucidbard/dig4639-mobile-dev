@@ -9,10 +9,8 @@ This is a different change than the local repository.
 The *ice* folder contains in-class exercises. 
 
 ## About Me
-
 My name is Amiel Devora https://amieldevora.webflow.io/
 I am looking for UX/UI position in the field. 
-
 
 ## Merging
  1. Item 1 [Google](http://www.google.com)
