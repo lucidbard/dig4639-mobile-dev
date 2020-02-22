@@ -5,7 +5,7 @@ import './components/Card/index.css';
 class App extends React.Component {
   render(){
     return(
-      <div id="card">
+      <div className="card">
       <Card content="This is a card!"></Card>
       </div>
     );
