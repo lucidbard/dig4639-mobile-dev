@@ -93,5 +93,3 @@ function evalItem (item) {
 console.log(printTodo(todoList.filter(evalItem)).join('\n'))
 
 console.log(printTodo(todoList.filter((item) => item.completed)))
-
-
