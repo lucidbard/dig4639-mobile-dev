@@ -1,0 +1,24 @@
+  
+
+
+{
+
+    "cards": [
+        {
+            "name": "john",
+            "about": "eats soup with a fork."
+        },
+        {
+            "name": "Bob",
+            "about": "Microwaves fish at work."
+        },
+        {
+            "name": "Jasmine",
+            "about": "Enjoys watching the Bachelor."
+        },
+        {
+            "name": "Shannon",
+            "about": " snorts when she laughs."
+        }
+    ]
+}
