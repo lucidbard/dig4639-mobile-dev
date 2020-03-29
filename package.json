@@ -18,11 +18,12 @@
   "homepage": "https://github.com/lucidbard/dig4639-mobile-dev#readme",
   "dependencies": {
     "babel": "^6.23.0",
-    "babel-eslint": "^10.0.3",
     "eslint-plugin-flowtype": "^4.6.0",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react-hooks": "^2.3.0",
-    "jest": "^24.9.0"
+    "expo-cli": "^3.15.5",
+    "jest": "^24.9.0",
+    "node": "^13.11.0"
   },
   "devDependencies": {
     "eslint": "^6.8.0",
