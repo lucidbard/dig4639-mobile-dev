@@ -1,9 +1,10 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import * as React from 'react';
+import { Ionicons } from '@expo/vector-icons';
 
 import TabBarIcon from '../components/TabBarIcon';
 import Contacts from '../screens/Contacts';
-import AddTask from '../screens/AddTask';
+import LinksScreen from '../screens/newContact';
 
 const BottomTab = createBottomTabNavigator();
 const INITIAL_ROUTE_NAME = 'Contacts';
@@ -20,15 +21,15 @@ export default function BottomTabNavigator({ navigation, route }) {
         name="Contacts"
         component={Contacts}
         options={{
-          title: 'CONTACTS',
-          tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="ios-list" />,
+          title: 'Contacts',
+          tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="ios-contact" />,
         }}
       />
       <BottomTab.Screen
-        name="Add"
-        component={AddTask}
+        name="newContacts"
+        component={LinksScreen}
         options={{
-          title: 'ADD ',
+          title: 'Add',
           tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="ios-add" />,
         }}
       />
@@ -42,7 +43,7 @@ function getHeaderTitle(route) {
   switch (routeName) {
     case 'Contacts':
       return 'Contacts';
-    case 'Add':
+    case 'newContacts':
       return 'Add a new contact';
   }
 }

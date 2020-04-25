@@ -3,16 +3,23 @@ import * as React from 'react';
 import { Button, Image, Platform, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { CheckBox } from 'react-native-elements'
 import { ScrollView } from 'react-native-gesture-handler';
-
 import { MonoText } from '../components/StyledText';
 
-export default class HomeScreen extends React.Component {
+export default class Contacts extends React.Component {
   state = {todoList:[]}
+  focusListener = undefined;
 
-  componentDidMount() {
+  constructor(props) {
+    super(props)
+   this.focusListener = props.navigation.addListener('focus',
+    () => this.componentGainsFocus())
+  }
+
+  
+  updateTaskList() {
     fetch('http://plato.mrl.ai:8080/todo', {
         headers: {
-          "API":"murray"
+          "API":"barrett"
         }
     })
       .then(res => res.json())
@@ -21,13 +28,47 @@ export default class HomeScreen extends React.Component {
         this.setState({todoList:body.todo})
       })
   }
+  componentGainsFocus() {
+    console.log("has focus")
+    this.updateTaskList()
+    
+  }
+
+  componentWillUnmount() {
+    this.props.navigation.removeListener('focus', this.componentGainsFocus)
+  }
+
+  componentDidMount() {
+    this.updateTaskList()
+  }
+  removeTask(position ) {
+    fetch('http://plato.mrl.ai:8080/todo/remove' , {
+      method: "POST",
+      headers: {
+        "API" : "barrett",
+        "Content-Type": "application/json",
+        "Accept":"application/json"
+      },
+      body: JSON.stringify({position:position, status:true})
+    })
+      .then(res => res.json())
+      .then(body => {
+        console.log(body)
+        if(body.removed != undefined) {
+          const currentList = this.state.todoList.filter((v,i) =>
+            (i !== position))
+           this.setState({todoList: currentList})  
+           } 
+          })
+
+  }
 
   // Implement completing the task on the server
   completeTask(position, state) {
-    fetch('http://plato.mrl.ai:8080/todo/setState', {
+    fetch('http://plato.mrl.ai:8080/todo/setState' , {
       method: "POST",
       headers: {
-        "API":"murray",
+        "API" : "barrett",
         "Content-Type": "application/json",
         "Accept":"application/json"
       },
@@ -41,7 +82,7 @@ export default class HomeScreen extends React.Component {
           currentList[position].completed = state
           this.setState({todoList: currentList})
         }
-        // this.setState({todoList:body.todo})
+
       })
   } 
 
@@ -49,24 +90,30 @@ export default class HomeScreen extends React.Component {
     return (
       <View style={styles.container}>
       <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
-        <Text>Todo items:</Text>
+       
         {this.state.todoList.map((item, index) =>
           <View key={index} style={styles.todoView}>
            <CheckBox
             checked={item.completed}
             onPress={() => this.completeTask(index, !item.completed)}
           />
-            <Text>{index}: {item.text} {item.completed ? "COMPLETED" : ""}
+            <Text > {item.text} 
             </Text>
+            <View style={{position:'absolute',right:0}}>
+            <Button title="X" onPress={() => this.removeTask(index)}> </Button>
+            </View>
           </View>
         )}
+        <Button
+          title="Add Task"
+          onPress={() => this.props.navigation.navigate('Add')} />
       </ScrollView>
     </View>
     );
   }
 }
 
-HomeScreen.navigationOptions = {
+Contacts.navigationOptions = {
   header: null,
 };
 
@@ -108,6 +155,7 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'row',
     backgroundColor: '#fff',
+    alignItems: 'center'
   },
   container: {
     flex: 1,
@@ -139,7 +187,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginHorizontal: 50,
   },
-  homeScreenFilename: {
+  ContactsFilename: {
     marginVertical: 7,
   },
   codeHighlightText: {

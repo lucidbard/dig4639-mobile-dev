@@ -1,0 +1,11 @@
+{
+    "eslint.format.enable": true,
+    "eslint.workingDirectories": [
+
+        "./demo/w14b-2"
+    
+    ],
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint" : true
+    }
+}
