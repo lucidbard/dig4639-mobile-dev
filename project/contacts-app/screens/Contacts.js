@@ -16,16 +16,11 @@ const HEADERS = {
 }
 
 export default function Contacts(){
+  
   const { promiseInProgress } = usePromiseTracker();
   const[contacts, setContacts] = React.useState([])
-  const addUser = React.useCallback(()=>
-  {
-    fetch('http://plato.mrl.ai:8080/contacts/add', HEADERS
-    )
-    .then(response => response.json())
-    .then(body => console.log(body))
-  },
-   [])
+  
+
 
 React.useEffect(() => {
   console.log("Use effect")
@@ -38,12 +33,19 @@ React.useEffect(() => {
 return (
   <View style={styles.container}>
   <ScrollView>
-    <Button title="Add User" onPress={addUser} />
+    
     { promiseInProgress ?
     <ActivityIndicator />
   :
     contacts.map((contact, i)=>
-    <Card key={i} title={contact.name} />
+    <Card key={i} title={contact.name} text={contact.number}>
+     
+      <Text>{contact.number}</Text>
+      <br></br>
+      <Button title="Delete"></Button>
+      
+    </Card>
+    
      )
     }
   </ScrollView>
@@ -56,6 +58,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
   },
+
   developmentModeText: {
     marginBottom: 20,
     color: 'rgba(0,0,0,0.4)',

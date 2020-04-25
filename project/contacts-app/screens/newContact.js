@@ -1,13 +1,38 @@
 import { Ionicons } from '@expo/vector-icons';
 import * as WebBrowser from 'expo-web-browser';
 import * as React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import {Button, StyleSheet, Text, View } from 'react-native';
 import { RectButton, ScrollView } from 'react-native-gesture-handler';
+import {Input, Card } from 'react-native-elements';
 
-export default function LinksScreen() {
+const HEADERS = {
+  "method": "GET",
+  "headers":  {
+    "API": "barrett",
+    "Content-Type": "application/json"
+  }
+}
+
+export default function newContact() {
+  const addUser = React.useCallback(()=>
+  {
+    fetch('http://plato.mrl.ai:8080/contacts/add', HEADERS
+    )
+    .then(response => response.json())
+    .then(body => console.log(body))
+  },
+   [])
+
+   
+
+
   return (
     <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
-   
+      <Input placeholder="Contact Name"
+        onChangeText={text => this.handleTextInput(text)} />  
+      <Input placeholder="Phone Number"
+        onChangeText={text => this.handleTextInput(text)} /> 
+   <Button title="Add User" onPress={addUser} />
     </ScrollView>
   );
 }
