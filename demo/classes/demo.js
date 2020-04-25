@@ -1,6 +1,9 @@
+<<<<<<< HEAD
+=======
 var a = 5
 
 console.log(a)
+>>>>>>> fe277fcee38e1b953a813f52fa2d0a9fceacf0f6
 class Pet {
   constructor (props) {
     this.props = props
@@ -15,6 +18,14 @@ class Pet {
   }
 
   getSpeech () {
+<<<<<<< HEAD
+    return 'I make this Sound: '
+  }
+
+    getIdentity = () => {
+      console.log(this)
+    }
+=======
     return 'I make this sound: '
   }
 
@@ -26,6 +37,7 @@ class Pet {
   getSum = (a, b) => {
     return a + b
   }
+>>>>>>> fe277fcee38e1b953a813f52fa2d0a9fceacf0f6
 }
 
 class Cat extends Pet {
@@ -35,9 +47,16 @@ class Cat extends Pet {
   }
 
   getSpeech () {
+<<<<<<< HEAD
+    return super.getSpeech() + 'Meow!'
+  }
+}
+
+=======
     return super.getSpeech() + 'Meow!!'
   }
 }
+>>>>>>> fe277fcee38e1b953a813f52fa2d0a9fceacf0f6
 class Dog extends Pet {
   constructor (props) {
     super(props)
@@ -45,6 +64,23 @@ class Dog extends Pet {
   }
 
   getSpeech () {
+<<<<<<< HEAD
+    return super.getSpeech() + 'ruff ruff!'
+  }
+}
+function sayName (pet) {
+  console.log(`my name is ${pet.getName()}, and i am a ${pet.getSpecies()}`)
+}
+
+var myPet = new Cat({ name: 'Luna' })
+sayName(myPet)
+myPet.getIdentity()
+var myIdentity = myPet.getIdentity
+
+var myDog = new Dog({ name: 'Fido' })
+sayName(myDog)
+myDog.getIdentity()
+=======
     return super.getSpeech() + 'Ruff Ruff!!'
   }
 }
@@ -63,3 +99,4 @@ var myDog = new Dog({ name: 'Fido' })
 sayName(myDog)
 myDog.getIdentity()
 console.log(myDog.getSum(10, 20))
+>>>>>>> fe277fcee38e1b953a813f52fa2d0a9fceacf0f6

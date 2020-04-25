@@ -1,5 +1,6 @@
 import "./index.css"
 
+
 class Task {
     constructor(props) {
         // Stores the argument in this.props
@@ -18,9 +19,16 @@ class Task {
     }
 
     onClick(e) {
+        if(e.target.checked) {
+            console.log("input is true");
+            }
         console.log(this);
         console.log(e.target);
         console.log(e.target.checked);
+        this.props.done=e.target.checked;
+        console.log(this.props.done);
+        
+
     }
 
     render() {
@@ -28,4 +36,5 @@ class Task {
     }
 }
 
-export default Task;
+
+export default Task

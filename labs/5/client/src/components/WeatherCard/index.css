@@ -1,0 +1,15 @@
+
+  h1 {
+      Color: blue;
+      font-family: ariel;
+      text-decoration: underline;
+  }
+
+  .card {
+    box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.2);
+    max-width: 60%;
+    margin: auto;
+    text-align: center;
+    padding: 1em;
+    font-family:'Times New Roman', Times, serif;
+  }

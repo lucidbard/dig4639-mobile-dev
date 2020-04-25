@@ -1,4 +1,4 @@
-console.log("Hello World");
+console.log("hello world");
 var x = [1];
 function scopeDemo(x1) {
     console.log(x1);
@@ -13,4 +13,4 @@ function scopeDemo(x1) {
     }
 }
 scopeDemo(x);
-console.log(x);
+Console.log(x);

@@ -1,30 +1,38 @@
 import { Ionicons } from '@expo/vector-icons';
 import * as WebBrowser from 'expo-web-browser';
 import * as React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import {Button, StyleSheet, Text, View } from 'react-native';
 import { RectButton, ScrollView } from 'react-native-gesture-handler';
+import {Input, Card } from 'react-native-elements';
 
-export default function LinksScreen() {
+const HEADERS = {
+  "method": "GET",
+  "headers":  {
+    "API": "barrett",
+    "Content-Type": "application/json"
+  }
+}
+
+export default function newContact() {
+  const addUser = React.useCallback(()=>
+  {
+    fetch('http://plato.mrl.ai:8080/contacts/add', HEADERS
+    )
+    .then(response => response.json())
+    .then(body => console.log(body))
+  },
+   [])
+
+   
+
+
   return (
     <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
-      <OptionButton
-        icon="md-school"
-        label="Read the Expo documentation"
-        onPress={() => WebBrowser.openBrowserAsync('https://docs.expo.io')}
-      />
-
-      <OptionButton
-        icon="md-compass"
-        label="Read the React Navigation documentation"
-        onPress={() => WebBrowser.openBrowserAsync('https://reactnavigation.org')}
-      />
-
-      <OptionButton
-        icon="ios-chatboxes"
-        label="Ask a question on the forums"
-        onPress={() => WebBrowser.openBrowserAsync('https://forums.expo.io')}
-        isLastOption
-      />
+      <Input placeholder="Contact Name"
+        onChangeText={text => this.handleTextInput(text)} />  
+      <Input placeholder="Phone Number"
+        onChangeText={text => this.handleTextInput(text)} /> 
+   <Button title="Add User" onPress={addUser} />
     </ScrollView>
   );
 }
